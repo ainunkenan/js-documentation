@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/night-owl.min.css"
+    />
+  </head>
+  <body>
+    <div class="hamburger" id="hamburger">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    <div class="sidebar" id="sidebar">
+      <ul>
+        <a href="#introduction"><li>Introduction</li></a>
+        <a href="#js-vs-java"><li>JS vs JAVA</li></a>
+        <a href="#variables"><li>Variables</li></a>
+        <a href="#var-scope"><li>Variable Scope</li></a>
+        <a href="#let-var-go"><li>Let Var Go</li></a>
+        <a href="#data-types"><li>Data Types</li></a>
+      </ul>
+    </div>
+    <div class="dim"></div>
+    <main class="content">
+      <h1 class="proj-title">Javascript Documentation</h1>
+      <section id="introduction">
+        <h2 class="section-title">Introduction</h2>
+        <p class="section-content">
+          JavaScript is a powerful and versatile programming language that plays
+          a pivotal role in the world of web development.<br />
+          <strong>In 1995</strong>, JavaScript was created by
+          <strong>Brendan Eich</strong> in just ten days while working at
+          Netscape Communications. Initially known as <em>"Mocha"</em> it was
+          later renamed <em>"LiveScript"</em> before finally becoming
+          JavaScript.<br />Its purpose was to add client-side interactivity to
+          web pages, and it was first introduced in the Netscape Navigator
+          browser.
+        </p>
+        <p class="section-content">
+          Recognizing the need for a standardized version of the language,
+          Netscape submitted JavaScript to the Ecma International organization.
+          This led to the first <strong>ECMAScript</strong> standard, published
+          in <strong>1997</strong>. <br />ECMAScript is the formal specification
+          for JavaScript. JavaScript's popularity grew rapidly, but it faced
+          compatibility issues due to competing browser vendors implementing the
+          language differently.<br />This period, known as the "browser wars,"
+          marked significant advancements in JavaScript capabilities and
+          performance.
+        </p>
+        <p class="section-content">
+          JavaScript became a crucial part of the Web 2.0 movement. Technologies
+          like <em>Asynchronous JavaScript</em> and <em>XML (AJAX)</em> allowed
+          for seamless data exchange between the client and server, ushering in
+          an era of dynamic and interactive web applications.
+        </p>
+        <p class="section-content">
+          JavaScript became an integral part of the HTML5 standard, allowing for
+          new capabilities like the HTML5 Canvas, Web Workers, and the
+          Geolocation API. These additions revolutionized web development,
+          making it possible to create complex applications entirely in the
+          browser.
+        </p>
+        <p class="section-content">
+          JavaScript saw the emergence of powerful front-end and back-end
+          frameworks, such as <strong>Angular</strong>, <strong>React</strong>,
+          and <strong>Vue.js</strong> for client-side development, and
+          <strong>Express.js</strong> for server-side development with
+          <strong>Node.js</strong>. These frameworks streamlined the development
+          process and offered robust solutions for building modern web
+          applications.
+        </p>
+        <p class="section-content">
+          <strong>ECMAScript 6 (ES6)</strong> was a significant update to
+          JavaScript, introducing new syntax and features that enhanced the
+          language's expressiveness and maintainability. Subsequent ECMAScript
+          releases have continued to add features and improvements.
+        </p>
+        <p class="section-content">
+          Today, JavaScript is one of the most widely used programming languages
+          globally, powering not only web applications but also mobile apps
+          (through frameworks like <strong>React Native</strong>) and even
+          desktop applications. Its extensive ecosystem, active community, and
+          continuous evolution make it a fundamental tool for developers in the
+          ever-evolving world of technology.
+        </p>
+      </section>
+      <div class="div"></div>
+      <section id="js-vs-java">
+        <h2 class="section-title">
+          JavaScript vs Java,<br />Unraveling the Differences
+        </h2>
+        <p class="section-content">
+          JavaScript and Java, despite their similar names, are two distinct
+          programming languages with different purposes, use cases, and
+          characteristics.
+        </p>
+        <ol>
+          <li class="section-content">Purpose and Use Cases:</li>
+          <ul>
+            <li class="section-content">
+              <strong>JavaScript:</strong> JavaScript is primarily a client-side
+              scripting language used for enhancing web pages. It allows
+              developers to create interactive and dynamic content in web
+              browsers. JavaScript is essential for tasks such as form
+              validation, animations, and modifying the Document Object Model
+              (DOM) on web pages.
+            </li>
+            <li class="section-content">
+              <strong>Java:</strong> Java is a versatile, general-purpose
+              programming language that can be used for a wide range of
+              applications, including web development, desktop software, mobile
+              apps, and backend systems. It is often used for building Android
+              mobile applications, enterprise-level applications, and
+              large-scale, server-side applications.
+            </li>
+          </ul>
+          <br />
+          <li class="section-content">Language Type:</li>
+          <ul>
+            <li class="section-content">
+              <strong>JavaScript:</strong> JavaScript is a dynamically typed,
+              interpreted language. It does not require compilation and is
+              executed directly in the browser.
+            </li>
+            <li class="section-content">
+              <strong>Java:</strong> Java is a statically typed language, which
+              means that type checking is performed at compile time. Java code
+              is compiled into bytecode, which runs on the Java Virtual Machine
+              (JVM).
+            </li>
+          </ul>
+          <br />
+          <li class="section-content">Syntax and Semantics:</li>
+          <ul>
+            <li class="section-content">
+              <strong>JavaScript:</strong> JavaScript's syntax is inspired by C
+              and C++, but it also has functional programming features. It has a
+              flexible and forgiving syntax, making it accessible for beginners.
+              It supports event-driven, asynchronous programming, which is
+              crucial for web development.
+            </li>
+            <li class="section-content">
+              <strong>Java:</strong> Java's syntax is more rigid and verbose
+              compared to JavaScript. It follows a more traditional
+              object-oriented programming (OOP) paradigm and enforces strong
+              typing and explicit declarations.
+            </li>
+          </ul>
+          <br />
+          <li class="section-content">Ecosystem and Libraries:</li>
+          <ul>
+            <li class="section-content">
+              <strong>JavaScript:</strong> JavaScript has a vast ecosystem of
+              libraries and frameworks, including jQuery, React, Angular, and
+              Vue.js for front-end development, and Node.js for server-side
+              development. This rich ecosystem simplifies and accelerates web
+              and application development.
+            </li>
+            <li class="section-content">
+              <strong>Java:</strong> Java also boasts a robust ecosystem with
+              numerous libraries and frameworks. Popular Java frameworks include
+              Spring for web applications and Hibernate for database access. It
+              is widely used in enterprise environments.
+            </li>
+          </ul>
+          <br />
+          <li class="section-content">Platform and Runtime:</li>
+          <ul>
+            <li class="section-content">
+              <strong>JavaScript:</strong> JavaScript runs within web browsers,
+              making it a client-side language. However, with Node.js, it can
+              also be used on the server-side.
+            </li>
+            <li class="section-content">
+              <strong>Java:</strong> Java applications are typically compiled
+              into bytecode that runs on the Java Virtual Machine (JVM). This
+              enables Java to be platform-independent, as long as there is a
+              compatible JVM for the target platform.
+            </li>
+          </ul>
+          <br />
+          <li class="section-content">Learning Curve:</li>
+          <ul>
+            <li class="section-content">
+              <strong>JavaScript:</strong> JavaScript is often considered more
+              accessible to beginners due to its forgiving nature (e.g
+              dynamically typed, etc) and extensive online resources for
+              learning.
+            </li>
+            <li class="section-content">
+              <strong>Java:</strong> Java's learning curve can be steeper,
+              particularly for those new to programming. Its static typing and
+              OOP principles may require more upfront knowledge and effort to
+              master.
+            </li>
+          </ul>
+        </ol>
+        <p class="section-content">
+          While JavaScript and Java share a name and some syntactical
+          similarities, they serve different purposes and have distinct
+          characteristics. JavaScript is the go-to language for web development
+          and enhancing user interfaces, while Java is a versatile language used
+          in a wide array of applications, from mobile apps to enterprise-level
+          software.
+        </p>
+      </section>
+      <div class="div"></div>
+      <section id="variables">
+        <h2 class="section-title">Variables</h2>
+        <p class="section-content">
+          Variables are a fundamental concept in JavaScript, as in most
+          programming languages. They act as containers for storing and managing
+          data within your scripts. JavaScript variables are versatile, allowing
+          you to work with various types of data, change their values, and use
+          them in calculations and logical operations.
+        </p>
+        <h3 class="section-heading">Declaring Variables:</h3>
+        <p class="section-content">
+          In JavaScript, you can declare variables using three keywords:
+          <strong>var</strong>, <strong>let</strong>, and
+          <strong>const</strong>.
+        </p>
+        <ul>
+          <li class="section-content">
+            <strong>var</strong>: Historically, var was the primary way to
+            declare variables in JavaScript. Variables declared with var, are
+            either function-scoped or global-scoped. They are visible through
+            blocks.
+          </li>
+          <li class="section-content">
+            <strong>let</strong>: Introduced in ECMAScript 6 (ES6), let provides
+            block-level scope, making it a better choice for declaring variables
+            within blocks, such as loops and conditional statements. Variables
+            declared with let can be reassigned.
+          </li>
+          <li class="section-content">
+            <strong>const</strong>: Also introduced in ES6, const is used to
+            declare constants, which are variables with values that cannot be
+            changed after assignment. Like let, const also has block-level
+            scope.
+          </li>
+        </ul>
+        <h3 class="section-heading">Variable Naming Rules:</h3>
+        <p class="section-content">
+          In JavaScript, variable names are subject to specific naming rules and
+          conventions. Adhering to these rules ensures your code is readable,
+          maintainable, and less error-prone.
+        </p>
+        <ul>
+          <li class="section-content">
+            Variable names are case-sensitive, meaning
+            <strong>myName</strong> and <strong>myname</strong> are
+            <em>considered distinct variables</em>.
+          </li>
+          <li class="section-content">
+            The first character must be a letter, an underscore, or a dollar
+            sign.
+          </li>
+          <li class="section-content">
+            Variable names can consist of letters, digits, underscores (_), and
+            dollar signs ($).
+          </li>
+          <li class="section-content">
+            JavaScript has reserved words, also known as keywords, that cannot
+            be used as variable names. These reserved words are part of the
+            language's syntax and have predefined meanings. Examples include
+            <strong>if</strong>, <strong>else</strong>, <strong>while</strong>,
+            <strong>function</strong>, and others. You cannot use these as
+            variable names.
+          </li>
+          <li class="section-content">
+            Variable names should be descriptive and convey the purpose of the
+            variable. Meaningful variable names make your code more
+            understandable and maintainable.<br /><br />
+            For example, instead of using <strong>x</strong> or
+            <strong>a</strong> as a variable name, use something like
+            <strong>totalPrice</strong> or
+            <strong>userAge</strong>
+            to indicate what the variable represents.<br />Avoid using single
+            letters, such as <strong>i</strong>, <strong>j</strong>, or
+            <strong>x</strong>, as variable names for non-trivial variables.
+            Single-letter variable names can be confusing and should be reserved
+            for loop counters in short loops.<br /><br />
+          </li>
+          <li class="section-content">
+            JavaScript developers often use two common conventions for naming
+            variables: camelCase and snake_case.
+            <ul>
+              <li class="sub-section-content">
+                <em>CamelCase</em> : the first word is in lowercase, and
+                subsequent words begin with uppercase letters. For example:
+                <strong>myVariableName</strong> or <strong>userName</strong>.
+              </li>
+              <li class="sub-section-content">
+                <em>Snake_case</em> : words are separated by underscores. For
+                example: <strong>my_variable_name</strong> or
+                <strong>user_name</strong>.
+              </li>
+            </ul>
+          </li>
+          <li class="section-content">
+            Constants are often named in ALL_CAPS with underscores, such as
+            <strong>MAX_VALUE</strong> or <strong>PI</strong>. This naming
+            convention indicates that the value should not be changed after
+            assignment.
+          </li>
+          <li class="section-content">
+            It's a good practice to include a data type hint in your variable
+            names. For instance, if a variable stores a date, you can include
+            "date" in the name, such as <strong>startDate</strong> or
+            <strong>endDate</strong>.
+          </li>
+          <li class="section-content">
+            While JavaScript allows some special characters in variable names,
+            it's best to avoid them to maintain code clarity and avoid potential
+            issues. Stick to letters, digits, underscores, and dollar signs.
+          </li>
+        </ul>
+        <h3 class="section-heading">Assigning Values:</h3>
+        <p class="section-content">
+          You can assign values to variables during declaration or later in your
+          code.<br />For example:
+        </p>
+        <pre>
+          <code class="language-js">
+let user_age = 28; // Declaration and assignment
+let userName; // Declaration without assignment
+userName = "Kenan"; // Assignment after declaration
+          </code>
+        </pre>
+      </section>
+      <div class="div"></div>
+      <section id="var-scope">
+        <h2 class="section-title">Variables Scope</h2>
+        <p class="section-content">
+          In JavaScript, the scope of a variable refers to the region or context
+          in which that variable is accessible and can be used. The scope of a
+          variable is determined by how and where it is declared.<br />There are
+          two main types of variable scope in JavaScript: global scope and local
+          (or function) scope.
+        </p>
+        <ol>
+          <li class="section-content">Global Scope</li>
+          <ul>
+            <li class="section-content">
+              Variables declared outside of any function or block have global
+              scope. They are accessible from anywhere in the JavaScript code,
+              both inside and outside functions.
+            </li>
+            <li class="section-content">
+              Be cautious with global variables, as they can lead to naming
+              conflicts and make it harder to track variable changes in large
+              applications. They should be used sparingly and for values that
+              genuinely need to be accessible globally.
+            </li>
+          </ul>
+          <p class="section-content">Example of a global variable:</p>
+          <pre>
+            <code class="language-js">
+var globalVar = 10;
+function myFunc () {
+  // globalVar is accessible here
+  console.log(globalVar);
+}
+
+myFunc(); // Outputs 10
+console.log(globalVar); // Outputs 10
+            </code>
+          </pre>
+          <li class="section-content">Local (Function) Scope</li>
+          <ul>
+            <li class="section-content">
+              Variables declared within a function have local scope, meaning
+              they are only accessible within that function.
+            </li>
+            <li class="section-content">
+              Local scope also applies to variables declared within block
+              statements, such as if statements or loops, when using
+              <strong>let</strong> or <strong>const</strong>.
+            </li>
+          </ul>
+          <p class="section-content">Example of a local variable:</p>
+          <pre>
+            <code class="language-js">
+function myFunc () {
+  var localVar = 10; // localVar is locally scoped
+  console.log(localVar);
+}
+            
+myFunc(); // Outputs 10
+console.log(localVar); // ReferenceError: localVar is not defined
+            </code>
+          </pre>
+          <li class="section-content">Block Scope</li>
+          <ul>
+            <li class="section-content">
+              In modern JavaScript, variables declared with
+              <strong>let</strong> and <strong>const</strong> have block-level
+              scope. This means they are confined to the block in which they are
+              declared, whether it's a function, if statement, loop, or any
+              other block.
+            </li>
+            <li class="section-content">
+              Block-scoped variables are not hoisted, meaning they are only
+              accessible after their declaration within the block.
+            </li>
+          </ul>
+          <p class="section-content">Example of block-scoped variables:</p>
+          <pre>
+            <code class="language-js">
+function myFunc () {
+  if (true) {
+    let blockVar = 30; // blockVar is block-scoped
+    console.log(blockVar); // Outputs 30
+  }
+
+  console.log(blockVar); // ReferenceError: blockVar is not defined
+}
+            </code>
+          </pre>
+        </ol>
+      </section>
+      <div class="div"></div>
+      <section id="let-var-go">
+        <h2 class="section-title">Let Var Go</h2>
+        <p class="section-content">
+          The <strong>var</strong> keyword was the primary way to declare
+          variables in JavaScript for a long time.<br />However, with the
+          introduction of ECMAScript 6 (ES6) and the availability of
+          <strong>let</strong> and <strong>const</strong>, there are strong
+          reasons to let go of the <strong>var</strong> keyword and embrace the
+          newer variable declaration options.
+        </p>
+        <br />
+        <h3 class="section-heading">The Problem With Var</h3>
+        <ol>
+          <li class="section-content">No Block Scope</li>
+          <p class="section-content">
+            Variables declared with <strong>var</strong>, are either
+            function-scoped or global-scoped. They are visible through
+            blocks.<br />For Example :
+          </p>
+          <pre>
+            <code class="language-js">
+if (true) {
+  var fruit = "Grape";
+}
+
+console.log(fruit); // Outputs Grape, the variable lives after if
+            </code>
+          </pre>
+          <p class="section-content">
+            As <strong>var</strong> ignores code blocks, we've got a global
+            variable fruit. But if we used <strong>let fruit</strong> instead of
+            <strong>var fruit</strong>, then the variable would only be visible
+            inside <strong>if</strong>.
+          </p>
+          <pre>
+            <code class="language-js">
+if (true) {
+  let fruit = "Grape";
+}
+
+console.log(fruit); // ReferenceError: fruit is not defined
+            </code>
+          </pre>
+          <p class="section-content">Another example :</p>
+          <pre>
+            <code class="language-js">
+for (var i = 0 ; i < 10 ; i++) {
+  var one = 1;
+  //....
+}
+
+console.log(i); // 10, "i" is visible after loop, it's a global variable
+console.log(one); // 1, "one" is visible after loop, it's a global variable
+            </code>
+          </pre>
+          <p class="section-content">
+            As we can see, <strong>var</strong> pierces through
+            <strong>if</strong>, <strong>for</strong> or other code blocks.
+            That's because a long time ago in JavaScript, blocks had no Lexical
+            Environments, and <strong>var</strong> is a remnant of that time.
+          </p>
+          <li class="section-content">Tolerates Re-declaration</li>
+          <p class="section-content">
+            We can redeclare a variable any number of times with
+            <strong>var</strong>.<br />For Example : <br />
+          </p>
+          <pre>
+            <code class="language-js">
+var name = "Kenan";
+var name = "Kenny"; // the "name" variable is being redeclared
+// ...it doesn't trigger an error
+
+console.log(name); // Kenny
+            </code>
+          </pre>
+          <p class="section-content">
+            But if we declare the same variable with <strong>let</strong> twice,
+            an error happened :
+          </p>
+          <pre>
+            <code class="language-js">
+let name = "Kenan";
+let name = "Kenny"; // SyntaxError: 'name' has already been declared
+            </code>
+          </pre>
+          <li class="section-content">Declared below their use</li>
+          <p class="section-content">
+            <strong>var</strong> declarations are processed when the function
+            starts (or script starts for globals).<br />In other words,
+            <strong>var</strong> variables are defined from the beginning of the
+            function, no matter where the definition is (assuming that the
+            definition is not in the nested function).<br />Example :<br />
+          </p>
+          <pre>
+            <code class="language-js">
+function sayHi () {
+  name = "Kenan";
+  console.log ("Hi" + " " + name);
+  var name;
+}
+
+sayHi(); // Output Hi Kenan
+            </code>
+          </pre>
+          <p class="section-content">
+            While, if we do the same with <strong>let</strong> :
+          </p>
+          <pre>
+            <code class="language-js">
+function sayHi () {
+  name = "Kenan";
+  console.log ("Hi" + " " + name);
+  let name;
+}
+                
+sayHi(); // ReferenceError: Cannot access 'name' before initialization
+            </code>
+          </pre>
+          <p class="section-content">
+            People also call such behavior <em>“hoisting”</em> (raising),
+            because all <strong>var</strong> are <em>“hoisted”</em> (raised) to
+            the top of the function.<br />But, it is important to notice, while
+            the <strong>declarations</strong> are <em>“hoisted”</em>, the
+            <strong>assignments</strong> are not.<br />For Example :<br />
+          </p>
+          <pre>
+            <code class="language-js">
+function sayHi () {
+  console.log ("Hi" + " " + name);
+  var name = "Kenan";
+}
+                
+sayHi(); // Output Hi undefined
+            </code>
+          </pre>
+          <p class="section-content">
+            The line <strong>var name = "Kenan";</strong> has two action in it
+          </p>
+          <ol>
+            <li class="section-content">
+              Variable Declaration : <strong>var name</strong>
+            </li>
+            <li class="section-content">
+              Variable Assignment : <strong>= "Kenan"</strong>
+            </li>
+          </ol>
+          <p class="section-content">Another Example :</p>
+          <pre>
+            <code class="language-js">
+function sayHi () {
+  console.log ("Hi" + " " + name); // Hi undefined
+  var name; // declaration is being “hoisted”..
+  name = "Kenan"; // ..assignment works when the execution reaches it
+}
+
+sayHi(); // Output Hi undefined
+            </code>
+          </pre>
+          <p class="section-content">
+            Because all <strong>var</strong> declarations are processed at the
+            function start (<em>“hoisted”</em>), we can reference them at any
+            place. <br />But variables are <em>undefined</em> until the
+            assignments.<br /><br />In both examples above, the code runs
+            without an error, because the variable name exists.<br />But its
+            value is not yet assigned, so it shows <em>undefined</em>.
+          </p>
+          <p class="section-content">
+            In summary, the <strong>var</strong> keyword in JavaScript has been
+            largely replaced by <strong>let</strong> and
+            <strong>const</strong> due to their block-level scoping, the
+            prevention of hoisting-related issues, and improved code
+            predictability.
+          </p>
+          <p class="section-content">
+            By embracing <strong>let</strong> and <strong>const</strong>, we can
+            write cleaner, more maintainable, and less error-prone JavaScript
+            code.<br />It's advisable to transition away from
+            <strong>var</strong> in modern JavaScript development.
+          </p>
+        </ol>
+      </section>
+      <div class="div"></div>
+      <section id="data-types">
+        <h2 class="section-heading">Data Types</h2>
+        <p class="section-content">
+          Data types are fundamental building blocks in any programming
+          language, including JavaScript. They define the kind of data that can
+          be stored and manipulated in your JavaScript code.<br />Understanding
+          data types is essential for writing effective and error-free
+          JavaScript programs.<br />In JavaScript, data types are categorized
+          into two main groups: primitive data types and reference data types.
+        </p>
+        <ol>
+          <li class="section-content">Primitive Data Types</li>
+          <ul>
+            <li class="section-content">
+              <strong>Number</strong>: Represents both integers and
+              floating-point numbers.<br />Examples: <strong>42</strong>,
+              <strong>3.14</strong>.
+            </li>
+            <li class="section-content">
+              <strong>String</strong>: Represents sequences of characters,
+              enclosed in single (<strong>' '</strong>), double (<strong
+                >" "</strong
+              >), or backticks (<strong>` `</strong>) quotes.<br />
+              Examples: <strong>'Hello, world!'</strong>,
+              <strong>"JavaScript"</strong>.
+            </li>
+            <li class="section-content">
+              <strong>Boolean</strong>: Represents true or false values.<br />Examples:
+              <strong>true</strong>, <strong>false</strong>.
+            </li>
+            <li class="section-content">
+              <strong>Undefined</strong>: Represents a variable that has been
+              declared but has not been assigned a value.
+            </li>
+            <li class="section-content">
+              <strong>Null</strong>: Represents the absence of a value. It is
+              often used to explicitly indicate that a variable is empty or has
+              no value.
+            </li>
+            <li class="section-content">
+              <strong>Symbol (ES6 and later)</strong>: Represents unique and
+              immutable values. Symbols are often used as object property keys.
+            </li>
+          </ul>
+          <br />
+          <li class="section-content">Reference Data Types</li>
+          <p class="section-content">
+            Reference data types are more complex and can hold multiple values
+            and methods. They are mutable, which means their contents can be
+            changed. JavaScript has three primary reference data types.
+          </p>
+          <ul>
+            <li class="section-content">
+              <strong>Object</strong>: Objects are complex data structures that
+              can store key-value pairs. Objects can be used to represent a wide
+              range of data, from simple data structures to more complex
+              entities like arrays, functions, and custom data types.
+            </li>
+            <li class="section-content">
+              <strong>Array</strong>: Arrays are a specific type of object used
+              to store ordered collections of values. Elements in an array can
+              be of any data type and are accessed by their index.
+            </li>
+            <li class="section-content">
+              <strong>Function</strong>: Functions are also objects in
+              JavaScript. They can be assigned to variables, passed as arguments
+              to other functions, and returned as values. Functions are used to
+              define reusable blocks of code.
+            </li>
+          </ul>
+        </ol>
+      </section>
+    </main>
+    <script src="script.js"></script>
+    <!-- highlight js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+    <!-- highlight js end -->
+  </body>
+</html>
